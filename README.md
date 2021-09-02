@@ -1,6 +1,6 @@
-# Serverless Microservices
+# Serverless Microservices - Sample implementation
 
-This tutorial is an implementation of the guidence on _how to authorize access to Azure DevOps Rest APIs_ that is available [here][1]. 
+This tutorial provides step by step guidance for implementing an example serverless microservices architecture based on Azure serverless services [here][1]. 
 
 In this tutorial you will:
 - [Create an Azure App Service Web App and register it with with Azure DevOps.](#u1)  
