@@ -11,7 +11,7 @@ This tutorial provides step by step guidance for implementing an example serverl
 
 Below is the architecture for the example implementation. 
 
-![example scenario](./images/architecture.JPG)
+![example scenario](./images/aj-bikes-architecture.jpg)
 
 ## Steps:
 - [Create a Resource Group that holds all the services used in this example](#u1)  
