@@ -20,24 +20,21 @@ This tutorial provides step by step guidance for implementing an example serverl
 
 ## <a name="u1"> Create the Resource Group
 
-#### Create an Azure App Service Web App by following the steps below:
-
-   1. Login to Azure portal > Click on Create a resource
+   1. Login to Azure portal > In the top search bar start typing Resource Group > Click on Resource Group
       
-      ![create resource](./images/createresource.png)  
+      ![create resource group](./images/rg-create-1.jpeg)  
       
-   2. Click on create Web App
+   2. Click on the + sign at the top left corner
       
-      ![create web app](./images/webapp.png)  
+      ![create resource group](./images/rg-create-2.jpeg)  
       
-   3. Fill out the mandatory fields like resource group etc.Select **ASP.NET V4.7** in the Runtime stack field, and **Code** in the
-   Publish field. You can accept the defaults for the rest of the fields. Click on review and create.  
+   3. Select the subscription you want to use from the drop down > provide the resource group name > Select the region of your choice > click review and create  
    
-       ![create web app](./images/createWebApp.png)  
+       ![create resource group](./images/rg-create-3.jpeg)  
        
-   4. Once the web app is created, go to the web app in Azure portal and note down the web app url  
+   4.click on create.Resource group should be created momentarily.  
       
-       ![web app home](./images/WebAppHome.png)  
+       ![web app home](./images/rg-create-4.jpeg)  
    
     
 #### Register your Web App with Azure DevOps by following the steps below:
