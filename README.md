@@ -14,10 +14,10 @@ Below is the architecture for the example implementation.
 ![example scenario](./images/aj-bikes-architecture.jpg)
 
 ## Steps:
-- [Create a Resource Group that holds all the services used in this example](#u1)  
-- [Create Azure Function Apps for Order and Shipment micro services](#u2) 
-- [Get Azure DevOps REST API access token using your application](#u3). 
-- [Learn how to refresh the access token using a refresh token](#u4) 
+1. [Create a Resource Group that holds all the services used in this example](#u1)  
+2. [Create Azure Function Apps for Order and Shipment micro services](#u2) 
+3. [Get Azure DevOps REST API access token using your application](#u3). 
+4. [Learn how to refresh the access token using a refresh token](#u4) 
 
 ## <a name="u1"> 1. Create the Resource Group
 
