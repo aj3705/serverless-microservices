@@ -23,23 +23,28 @@ Below is the architecture for the example implementation.
 
    1. Login to Azure portal > In the top search bar start typing Resource Group > click on Resource Group
       
-      <img src="./images/rg-create-1.jpeg" width="50%" height="50%" />
+      <img src="./images/rg-create-1.jpeg" width="80%" height="80%" />
+     
       ```
   
-   2. Click on the + sign at the top left corner
+   2. Login to Azure portal > In the top search bar start typing Resource Group > click on Resource Group
       
-      <img src="./images/rg-create-2.jpeg" width="50%" height="50%" />
-      ``` 
+      <img src="./images/rg-create-1.jpeg" width="80%" height="80%" />
+      
+      ```
+   
       
    3. Select the subscription you want to use from the drop down > provide the resource group name > Select the region of your choice > click review and create  
    
-      <img src="./images/rg-create-3.jpeg" width="50%" height="50%" />
-      ``` 
+      <img src="./images/rg-create-3.jpeg" width="65%" height="65%" />
+  
+      ```
    
    4. Click on create.Resource group should be created momentarily. 
    
-      <img src="./images/rg-create-4.jpeg" width="50%" height="50%" />
-      ```
+      <img src="./images/rg-create-4.jpeg" width="65%" height="65%" />
+      
+   ```
       
    
     
