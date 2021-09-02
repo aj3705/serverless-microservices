@@ -17,11 +17,11 @@ Below is the architecture for the example implementation.
 1. [Create a Resource Group that holds all the services used in this example](#u1)  
 2. [Create micro services](#u2)
    - [Create Function App for Orders Microservice APIs](#u2a)
-   - Create Cosmos DB for Orcers Microservice data
-   - Create Function App for Shipments Microservice APIs
-   - Create Cosmos DB for Shipments Microservice APIs
-   - Create Service Bus for Microservice communications
-   - Create API Management Gateway to front the Microservices
+   - [Create Cosmos DB for Orcers Microservice data](#u2b)
+   - [Create Function App for Shipments Microservice APIs](#u2c)
+   - [Create Cosmos DB for Shipments Microservice APIs](#u2d)
+   - [Create Service Bus for Microservice communications](#u2e)
+   - [Create API Management Gateway to front the Microservices](#u2f)
 3. [Test your micro services](#u3). 
 4. [Further reading](#u4) 
 
@@ -57,19 +57,19 @@ Below is the architecture for the example implementation.
    ### <a name="u2a"> 
    - Create Function App for Orders Microservice APIs
    
-   ### <a name="u2a"> 
+   ### <a name="u2b"> 
    - Create Cosmos DB for Orcers Microservice data
    
-   ### <a name="u2a"> 
+   ### <a name="u2c"> 
    - Create Function App for Shipments Microservice APIs
    
-   ### <a name="u2a"> 
+   ### <a name="u2d"> 
    - Create Cosmos DB for Shipments Microservice APIs
    
-   ### <a name="u2a"> 
+   ### <a name="u2e"> 
    - Create Service Bus for Microservice communications
    
-   ### <a name="u2a"> 
+   ### <a name="u2f"> 
    - Create API Management Gateway to front the Microservices
  
 
