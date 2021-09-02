@@ -1,4 +1,4 @@
-# Serverless Microservices - an Example implementation
+# Serverless Microservices - an example implementation
 
 This tutorial provides step by step guidance for implementing an example serverless microservices architecture based on Azure serverless services. The following services are used in this implementation:
 - Azure Functions
@@ -7,13 +7,18 @@ This tutorial provides step by step guidance for implementing an example serverl
 - Azure API Management
 - Azure Application Insights
 
-In this tutorial you will:
-- [Create an Azure App Service Web App and register it with with Azure DevOps.](#u1)  
+## Example scenario
+
+
+### Architeture
+
+## Steps:
+- [Create a Resource Group that holds all the services used in this example](#u1)  
 - [Create an ASP .NET application](#u2) based on the [sample application][2] available on github and deploy it to Azure App Service Web App created above.
 - [Get Azure DevOps REST API access token using your application](#u3). 
 - [Learn how to refresh the access token using a refresh token](#u4) 
 
-## <a name="u1"> Create and register Azure App Service Web App
+## <a name="u1"> Create the Resource Group
 
 #### Create an Azure App Service Web App by following the steps below:
 
