@@ -11,8 +11,7 @@ This tutorial provides step by step guidance for implementing an example serverl
 
 Below is the architecture for the example implementation. 
 
-    
-
+![example scenario](./images/architecture.JPG)
 
 ## Steps:
 - [Create a Resource Group that holds all the services used in this example](#u1)  
@@ -25,10 +24,7 @@ Below is the architecture for the example implementation.
    1. Login to Azure portal > In the top search bar start typing Resource Group > Click on Resource Group
       
       ![create resource group](./images/rg-create-1.jpeg)
-      
-    
-     
-   
+        
    2. Click on the + sign at the top left corner
       
       ![create resource group](./images/rg-create-2.jpeg)  
