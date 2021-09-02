@@ -1,6 +1,11 @@
-# Serverless Microservices - Sample implementation
+# Serverless Microservices - an Example implementation
 
-This tutorial provides step by step guidance for implementing an example serverless microservices architecture based on [Azure serverless services][1]. 
+This tutorial provides step by step guidance for implementing an example serverless microservices architecture based on Azure serverless services. The following services are used in this implementation:
+- Azure Functions
+- Azure Cosmos DB
+- Azure Service Bus
+- Azure API Management
+- Azure Application Insights
 
 In this tutorial you will:
 - [Create an Azure App Service Web App and register it with with Azure DevOps.](#u1)  
