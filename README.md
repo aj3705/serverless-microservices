@@ -21,7 +21,7 @@ Below is the architecture for the example implementation.
 
 ## <a name="u1"> Create the Resource Group
 
-   1. Login to Azure portal > In the top search bar start typing Resource Group > Click on Resource Group
+   1. Login to Azure portal > In the top search bar start typing Resource Group > click on Resource Group
       
       ![create resource group](./images/rg-create-1.jpeg)
         
