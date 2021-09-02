@@ -24,7 +24,8 @@ Below is the architecture for the example implementation.
    1. Login to Azure portal > In the top search bar start typing Resource Group > click on Resource Group
       
       ![create resource group](./images/rg-create-1.jpeg)
-        
+      ```
+  
    2. Click on the + sign at the top left corner
       
       ![create resource group](./images/rg-create-2.jpeg)  
@@ -35,7 +36,7 @@ Below is the architecture for the example implementation.
        
    4.click on create.Resource group should be created momentarily.  
       
-       ![web app home](./images/rg-create-4.jpeg)  
+       ![create resource group](./images/rg-create-4.jpeg)  
    
     
 #### Register your Web App with Azure DevOps by following the steps below:
