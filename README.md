@@ -56,7 +56,8 @@ Below is the architecture for the example implementation.
    4. Click Create.Resource group should be created momentarily. 
    
       <img src="./images/rg-create-4.jpeg" width="50%" height="50%" />
-      
+   
+[home](#home)                                                                                                           
     
 ## <a name="u2"> 2. Create micro services
 
@@ -115,6 +116,8 @@ Below is the architecture for the example implementation.
       After the container creation you should see an empty container like this:
      
       <img src="./images/cosmosdb-create-7.jpeg" width="50%" height="50%" />
+
+[home](#home)
    
 ### <a name="u2b"> 2b. Create Function App for Orders Microservice APIs
    
@@ -149,7 +152,8 @@ Below is the architecture for the example implementation.
       
       <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
    
-
+[home](#home)
+   
 ### <a name="u2c"> 2c. Create Order Creation Microservice
    
    1. In the top search bar start typing Function App > Select Function App
@@ -183,6 +187,8 @@ Below is the architecture for the example implementation.
    5. Click Create. Your function will be created in a minute or so
       
       <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+
+[home](#home)
    
 ### <a name="u2d"> 2d. Create Cosmos DB for Shipments Microservice data
    
@@ -193,9 +199,11 @@ Below is the architecture for the example implementation.
    Repeat the same steps you used in section [2b](#u2b)  
    
 ### <a name="u2f"> 2f. Create Shipment Creation Microservice
-   
+
+[home](#home)
 ### <a name="u2g"> 2g. Create Shipment Status Microservice
-   
+
+[home](#home)
 ### <a name="u2h"> 2h. Create Service Bus for Microservice communications
    
    1. Login to Azure [portal][1] > In the top search bar start typing Service Bus > Select Service Bus
@@ -224,11 +232,11 @@ Below is the architecture for the example implementation.
    
 ### <a name="u2i"> 2i. Create API Management Gateway to front the Microservices
  
-
+[home](#home)
 ## <a name="u3"> 3. Test your micro services
    
    Follow the steps under **Run the sample** section in the [Azure DevOps OAuth sample app documentation][6] on github to obtain access and refresh tokens. Securely save these values. **You should keep these values secret.** 
-
+[home](#home)
 ## <a name="u4"> 4. Further reading
    
    OAuth access tokens have an expiry time. Follow the steps [here][7] to get a new token before your access token expires. This tutorial shows how to refresh your token using Postman, however you will typically automate this in your application code.
