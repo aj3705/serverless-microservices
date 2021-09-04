@@ -228,7 +228,7 @@ Below is the architecture for the example implementation.
    
          -  Partition key : {id}
       
-      <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
    
       __3b.Click Outputs > Add Outputs__ 
       
@@ -246,7 +246,7 @@ Below is the architecture for the example implementation.
    
          -  partition key: /id
       
-      <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
    
       __3c.Click Outputs > Add Outputs__
       
@@ -274,8 +274,9 @@ Below is the architecture for the example implementation.
    
    -  Make sure index.js is seleted in the drop down. 
    
-   -  Replace the entire code with the code in [src/create_order.js][2]
-       
+   -  Replace the entire code with the code in [src/create_order.js][2] and click save
+      
+      <img src="./images/order-func-create-8.jpeg" width="80%" height="50%" />
       
    
     
