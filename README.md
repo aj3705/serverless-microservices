@@ -30,27 +30,22 @@ Below is the architecture for the example implementation.
    1. Login to Azure [portal][1] > In the top search bar start typing Resource Group > click on Resource Group
       <img src="./images/rg-create-1.jpeg" width="80%" height="80%" />
      
-      ```
-  
+      
    2. Click on the + Create  at the top left corner
       
       <img src="./images/rg-create-2.jpeg" width="80%" height="80%" />
-      
-      ```
-   
+         
       
    3. Select the subscription you want to use from the drop down > provide the resource group name > Select the region of your choice > click review and create  
    
       <img src="./images/rg-create-3.jpeg" width="50%" height="50%" />
   
-      ```
-   
+         
    4. Click Create.Resource group should be created momentarily. 
    
       <img src="./images/rg-create-4.jpeg" width="50%" height="50%" />
       
-       ```
-
+    
 ## <a name="u2"> 2. Create micro services
 
 ### <a name="u2a"> 2a. Create Cosmos DB for Order Microservice data
@@ -58,50 +53,49 @@ Below is the architecture for the example implementation.
    1. Login to Azure [portal][1] > In the top search bar start typing Cosmos DB > Select Azure Cosmos DB
       
       <img src="./images/cosmosdb-create-1.jpeg" width="80%" height="60%" />
-     
-      ```
-  
+    
+   
    2. Click on the + Create  at the top left corner
       
       <img src="./images/cosmosdb-create-2.jpeg" width="80%" height="60%" />
       
-      ```
-   
       
    3. Select the Core(SQL) API option  
    
       <img src="./images/cosmosdb-create-3.jpeg" width="50%" height="50%" />
   
-      ```
-   
+         
    4. Provide the required values:
         
-      In the default _Basics_ tab, provide the following values
+      In the default _Basics_ tab, provide the following values:
+   
       _Resource Group:_ Select the resource group you created earlier.
+   
       _Account Name:_ Enter a globally unique account name:_ajbikes-orders-db_
+   
       _Location_: Select a location of your choice
+   
       _Capacity mode_: Serverless
    
       <img src="./images/cosmosdb-create-4a.jpeg" width="50%" height="50%" />
-      
-      ```
-      Click "Backup Policy" tab at the top and slect "Locally-redundant backup storage" for _Backup storage redundancy_
-      
-   
+         
+     
+      Click "Backup Policy" tab at the top and slect "Locally-redundant backup storage" for Backup storage redundancy
+         
       <img src="./images/cosmosdb-create-4b.jpeg" width="50%" height="50%" />
-      
-      ```
-   5. Click Review + Create > Create. Your Cosmos DB account should be created in a few minutes  
    
-      <img src="./images/cosmosdb-create-5.jpeg" width="50%" height="50%" />
-  
-      ```
+   5. Click Review + Create > Create. Your Cosmos DB account should be created in a few minutes  
+     
    6. Once the creation is complete, Go to your resource group and select the Cosmos DB that you just created
       
-      Click _Data Explorer_ in the left menu > Click New Container (top left) > Provide the following values
+      Click Data Explorer in the left menu > Click New Container (top left) > Provide the following values:
+   
       _Datebase id_: Select _Create new_ > provide a name like _ajbikes-orders-db_
+   
       _Container id_: provide a name like _ajbikes-orders-container_
+   
       _Partition key_: /id
+   
       Leave the rest of the defaults and click OK. 
       
       <img src="./images/cosmosdb-create-6.jpeg" width="50%" height="50%" />
