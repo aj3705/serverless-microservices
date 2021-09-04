@@ -235,7 +235,7 @@ Below is the architecture for the example implementation.
       
       <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
    
-     __3b.Click Outputs > Add Outputs__ 
+      __3b.Click Outputs > Add Outputs__ 
       
       Provide the following values and click OK:
    
@@ -251,7 +251,9 @@ Below is the architecture for the example implementation.
    
       partition key: /id
       
-     __3c.Click Outputs > Add Outputs__
+      <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
+   
+      __3c.Click Outputs > Add Outputs__
       
       Provide the following values and click OK:
    
@@ -265,9 +267,13 @@ Below is the architecture for the example implementation.
    
       Queue name : ajbikes-microservice-messsaging ( service bus queue that you created earlier)
       
+      Your output binding should look like this after it is created: 
+   
+      <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
+     
       
         
-   4. Provide the required values:
+   4. __Add Code to Create Order function__:
        
       _Resource Group:_ Select the resource group you created earlier.
    
