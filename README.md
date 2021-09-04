@@ -269,7 +269,7 @@ Below is the architecture for the example implementation.
       
       Your output binding should look like this after it is created: 
    
-      <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
+      <img src="./images/order-func-create-8.jpeg" width="80%" height="50%" />
      
       
         
