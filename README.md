@@ -276,7 +276,7 @@ Below is the architecture for the example implementation.
    
    -  Replace the entire code with the code in [src/create_order.js][2] and click save
       
-      <img src="./images/order-func-create-8.jpeg" width="80%" height="50%" />
+      <img src="./images/order-func-create-9.jpeg" width="80%" height="50%" />
       
    
     
