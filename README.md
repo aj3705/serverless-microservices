@@ -1,4 +1,4 @@
-# Serverless Microservices - an example implementation
+# <a name="home"> Serverless Microservices - an example implementation
 
 This tutorial provides step by step guidance for implementing an example serverless microservices architecture based on Azure serverless services. The following services are used in this implementation:
 - Azure Functions
@@ -145,13 +145,44 @@ Below is the architecture for the example implementation.
       
       <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
    
-   4. Click Create. Your function will be created in a minute or so
+   5. Click Create. Your function will be created in a minute or so
       
       <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
    
 
 ### <a name="u2c"> 2c. Create Order Creation Microservice
    
+   1. In the top search bar start typing Function App > Select Function App
+      Click Functions >Functions in the left menu > click Create at the top left corner
+      
+      <img src="./images/order-func-create-1.jpeg" width="80%" height="50%" />
+    
+   
+   2. Click on the + Create  at the top left corner
+     
+        
+   3. Provide the required values:
+       
+      _Resource Group:_ Select the resource group you created earlier.
+   
+      _Function App name:_ Enter a globally unique name:_ajbikes-orders-microservice_
+   
+      _Location_: Select a location of your choice
+   
+      _Runtime stack_: Node.js
+   
+      Leave other defaults and click Review + Create 
+   
+      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+   
+    
+   4. Click Create. Your function will be created in a minute or so
+      
+      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+   
+   5. Click Create. Your function will be created in a minute or so
+      
+      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
    
 ### <a name="u2d"> 2d. Create Cosmos DB for Shipments Microservice data
    
