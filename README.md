@@ -157,15 +157,60 @@ Below is the architecture for the example implementation.
 ### <a name="u2c"> 2c. Create Order Creation Microservice
    
    1. In the top search bar start typing Function App > Select Function App
+      
       Click Functions >Functions in the left menu > click Create at the top left corner
       
       <img src="./images/order-func-create-1.jpeg" width="80%" height="50%" />
     
    
-   2. Click on the + Create  at the top left corner
+   2. Select Http trigger > Change the function name to CreateOrder. 
+      
+      Make sure Development environment is selected to _Develop in portal_
+      
+      Click Create. This will create the function and open the CreateOrder function page.
+   
+      <img src="./images/order-func-create-2.jpeg" width="80%" height="50%" />
+      
+   3. Before we add the Create Order code, we will first bind this function to Orders Cosmos DB, so that this function can read from and write data to Orders Cosmos DB. We will also create an output binding to the Service Bus Message queue that we created earlier.
+      
+      Click on Integration in left menu. This will open up the Integration page. You will see a pictorial view of the Trigger, Input bindings and Output bindings. 
+      
+      <img src="./images/order-func-create-3.jpeg" width="80%" height="50%" />
+   
+      **Click Inputs > Add input ** 
+      
+      Select Azure Cosmos DB from the Binding Type drop down.**
+      
+      Click on New under the Cosmos DB account connection drop down > select Azure Cosmos DB Account radio button 
      
+      Select the ajbikes-orders-db Cosmos database you created earlier > Click OK
+      
+      <img src="./images/order-func-create-5.jpeg" width="80%" height="50%" />
+      
+      Provide the following values and click OK:  
+      
+      Document parameter name: order
+      Database name: ajbikes-orders-db (name of the orders cosmos db you created earlier)
+      Collection name: ajbikes-orders-container (name of the container you created earlier)
+      Document ID : {id}
+      Partition key : {id}
+      
+      <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
+   
+     **Click Outputs > Add Outputs ** 
+      
+      Provide the following values and click OK:
+      Binding type : Azure Cosmos DB.
+      Cosmos DB account connection: this will be prepopulated to the connection you created in the earlier step. Leave it as is
+      Document parameter name : neworder
+      Datebase name: ajbikes-orders-db
+      Collection name: ajbikes-orders-container
+      partition key: /id
+      
+      
+      
         
-   3. Provide the required values:
+   4. Provide the required values:
        
       _Resource Group:_ Select the resource group you created earlier.
    
