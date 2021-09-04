@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "appi-microservice-messaging",
+      "connection": "appi-ordermgmt_RootManageSharedAccessKey_SERVICEBUS"
+    },
+    {
+      "name": "newshipment",
+      "direction": "out",
+      "type": "cosmosDB",
+      "connectionStringSetting": "appi-shipments_DOCUMENTDB2",
+      "databaseName": "shipmentsdb",
+      "collectionName": "shipmentscontainer",
+      "partitionKey": "/id"
+    }
+  ]
+}
