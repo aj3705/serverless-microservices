@@ -13,6 +13,15 @@ Below is the architecture for the example implementation.
 
 ![example scenario](./images/aj-bikes-architecture.jpg)
 
+0. Customer places an order for bikes on aj bikes website
+1. Website sends a create order request to the Azure API Manager (APIM), the Microservices Gateway for aj bikes Microservices
+2. APIM sends the create order request to Orders Microservice, which is implemented using Azure Functions. Azure Functions is a per per execution serverless service.
+3. Orders Microservice stores the order in the Orders database implemented using Azure Cosmos DB 
+4. Orders Microservice enqueues "Order Created" event in the Azure Service bus that is used for Microservices communications. 
+5. Order Created Event triggers the Shipment Microservice implemented using Azure Functions
+6. Shipment Microservice reads the order data in the Order Created event and creates a Shipment in the Shipments databas implemented using Azure Cosmos DB     
+7. Shipment status is provided back to the customer via the APIM gateway.
+
 ## Steps:
 1. [Create a Resource Group that holds all the services used in this example](#u1)  
 2. [Create micro services](#u2)
