@@ -274,7 +274,7 @@ Below is the architecture for the example implementation.
    
    -  Make sure index.js is seleted in the drop down. 
    
-   -  Replace the entire code with the code in [src/create_order.js]:https://github.com/aj3705/serverless-microservices/blob/main/src/orders/create_order.js
+   -  Replace the entire code with the code in [src/create_order.js][2]
        
       
    
@@ -332,5 +332,6 @@ Below is the architecture for the example implementation.
 
 
 [1]:https://portal.azure.com
+[2]:https://github.com/aj3705/serverless-microservices/blob/main/src/orders/create_order.js
 
 
