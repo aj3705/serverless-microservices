@@ -148,7 +148,7 @@ Below is the architecture for the example implementation.
  
 ### <a name="u2d"> 2d. Create Function App for Shipments Microservice APIs
    
-   Repeat the same steps you used in section [3a](#u3a)  
+   Repeat the same steps you used in section [2b](#u2b)  
    
 ### <a name="u2e"> 2e. Create Service Bus for Microservice communications
    
