@@ -179,12 +179,7 @@ Below is the architecture for the example implementation.
    
     
    4. Click Create. Your function will be created in a minute or so
-      
-      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
-   
-   5. Click Create. Your function will be created in a minute or so
-      
-      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+
    
 [home](#home)
    
@@ -213,79 +208,75 @@ Below is the architecture for the example implementation.
    
       __3a.Click Inputs > Add input__
       
-      Select Azure Cosmos DB from the Binding Type drop down.
+      -  Select Azure Cosmos DB from the Binding Type drop down.
       
-      Click on New under the Cosmos DB account connection drop down > select Azure Cosmos DB Account radio button 
+      -  Click on New under the Cosmos DB account connection drop down > select Azure Cosmos DB Account radio button 
      
-      Select the ajbikes-orders-db Cosmos database you created earlier > Click OK
+      -  Select the ajbikes-orders-db Cosmos database you created earlier > Click OK
       
-      <img src="./images/order-func-create-5.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-5.jpeg" width="80%" height="50%" />
       
-      Provide the following values and click OK:  
+      -  Provide the following values and click OK:  
       
-      Document parameter name: order
+         -  Document parameter name: order
    
-      Database name: ajbikes-orders-db (name of the orders cosmos db you created earlier)
+         -  Database name: ajbikes-orders-db (name of the orders cosmos db you created earlier)
    
-      Collection name: ajbikes-orders-container (name of the container you created earlier)
+         -  Collection name: ajbikes-orders-container (name of the container you created earlier)
    
-      Document ID : {id}
+         -  Document ID : {id}
    
-      Partition key : {id}
+         -  Partition key : {id}
       
       <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
    
       __3b.Click Outputs > Add Outputs__ 
       
-      Provide the following values and click OK:
+      -  Provide the following values and click OK:
    
-      Binding type : Azure Cosmos DB.
+         -  Binding type : Azure Cosmos DB.
    
-      Cosmos DB account connection: this will be prepopulated to the connection you created in the earlier step. Leave it as is
+         -  Cosmos DB account connection: this will be prepopulated to the connection you created in the earlier step. Leave it as is
    
-      Document parameter name : neworder
+         -  Document parameter name : neworder
    
-      Datebase name: ajbikes-orders-db
+         -  Datebase name: ajbikes-orders-db
    
-      Collection name: ajbikes-orders-container
+         -  Collection name: ajbikes-orders-container
    
-      partition key: /id
+         -  partition key: /id
       
       <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
    
       __3c.Click Outputs > Add Outputs__
       
-      Provide the following values and click OK:
+      -  Provide the following values and click OK:
    
-      Binding type : Azure Service Bus.
+         -  Binding type : Azure Service Bus.
    
-      Message type : Service Bus Queue
+         -  Message type : Service Bus Queue
    
-      Service Bus connection: Click New >  Service Bus Connection: ajbikes service bus you created earlier. Leave other defaults and click OK.
+         -  Service Bus connection: Click New >  Service Bus Connection: ajbikes service bus you created earlier. Leave other defaults and click OK.
    
-      Message paramter name : leave the default (outputSbMsg)
+         -  Message paramter name : leave the default (outputSbMsg)
    
-      Queue name : ajbikes-microservice-messsaging ( service bus queue that you created earlier)
+         -  Queue name : ajbikes-microservice-messsaging ( service bus queue that you created earlier)
       
-      Your output binding should look like this after it is created: 
+         Your output binding should look like this after it is created: 
    
-      <img src="./images/order-func-create-8.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-8.jpeg" width="80%" height="50%" />
      
       
         
-   4. __Add Code to Create Order function__:
+   4. __Add Code to CreateOrder function__:
+   
+   -  Go to CreateOrder function that you created earlier and  click on Code+Test in the left menu
+   
+   -  Make sure index.js is seleted in the drop down. 
+   
+   -  Replace the entire code with the code in [src/create_order.js](./src/create_order.js)
        
-      _Resource Group:_ Select the resource group you created earlier.
-   
-      _Function App name:_ Enter a globally unique name:_ajbikes-orders-microservice_
-   
-      _Location_: Select a location of your choice
-   
-      _Runtime stack_: Node.js
-   
-      Leave other defaults and click Review + Create 
-   
-      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+      
    
     
    4. Click Create. Your function will be created in a minute or so
