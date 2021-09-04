@@ -61,12 +61,12 @@ Below is the architecture for the example implementation.
    
    1. Login to Azure [portal][1] > In the top search bar start typing Cosmos DB > Select Azure Cosmos DB
       
-      <img src="./images/cosmosdb-create-1.jpeg" width="80%" height="60%" />
+      <img src="./images/cosmosdb-create-1.jpeg" width="80%" height="50%" />
     
    
    2. Click on the + Create  at the top left corner
       
-      <img src="./images/cosmosdb-create-2.jpeg" width="80%" height="60%" />
+      <img src="./images/cosmosdb-create-2.jpeg" width="80%" height="50%" />
       
       
    3. Select the Core(SQL) API option  
@@ -114,8 +114,36 @@ Below is the architecture for the example implementation.
       <img src="./images/cosmosdb-create-7.jpeg" width="50%" height="50%" />
    
 ### <a name="u2b"> 2b. Create Function App for Orders Microservice APIs
-
+   
+   1. Login to Azure [portal][1] > In the top search bar start typing Function App > Select Function App
+      
+      <img src="./images/function-create-1.jpeg" width="80%" height="50%" />
+    
+   
+   2. Click on the + Create  at the top left corner
+     
+        
+   3. Provide the required values:
+       
+      _Resource Group:_ Select the resource group you created earlier.
+   
+      _Function App name:_ Enter a globally unique name:_ajbikes-orders-microservice_
+   
+      _Location_: Select a location of your choice
+   
+      _Runtime stack_: Node.js
+   
+      Leave other defaults and click Review + Create 
+   
+      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+   
+    4. Click Create. Your function will be created in a minute or so
+      
+      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />       
+   
 ### <a name="u2c"> 2c. Create Cosmos DB for Shipments Microservice data
+   
+   Repeat the same steps you used in section [2a](#u2a)
  
 ### <a name="u2d"> 2d. Create Function App for Shipments Microservice APIs
      
