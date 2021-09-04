@@ -26,13 +26,13 @@ Below is the architecture for the example implementation.
 1. [Create a Resource Group that holds all the services used in this example](#u1)  
 2. [Create micro services](#u2)
    - [Create Cosmos DB for Orders Microservice data](#u2a)
-   - [Create Function App for Orders Microservice APIs](#u2b)
-   - [Create Order Creation Microservice API](#u2c)
-   - [Create Cosmos DB for Shipments Microservice APIs](#u2d)
-   - [Create Function App for Shipments Microservice APIs](#u2e)
-   - [Create Shipment Creation Microservice trigger](#u2f)
-   - [Create Shipment Status Microservice API](#u2g)
-   - [Create Service Bus for Microservice communications](#u2h)
+   - [Create Service Bus for Microservice communications](#u2b)
+   - [Create Function App for Orders Microservice APIs](#u2c)
+   - [Create Order Creation Microservice API](#u2d)
+   - [Create Cosmos DB for Shipments Microservice APIs](#u2e)
+   - [Create Function App for Shipments Microservice APIs](#u2f)
+   - [Create Shipment Creation Microservice trigger](#u2g)
+   - [Create Shipment Status Microservice API](#u2h)
    - [Create API Management Gateway to front the Microservices](#u2i)
 3. [Test your micro services](#u3). 
 4. [Further reading](#u4) 
@@ -118,8 +118,33 @@ Below is the architecture for the example implementation.
       <img src="./images/cosmosdb-create-7.jpeg" width="50%" height="50%" />
 
 [home](#home)
+
+### <a name="u2b"> 2h. Create Service Bus for Microservice communications
    
-### <a name="u2b"> 2b. Create Function App for Orders Microservice APIs
+   1. Login to Azure [portal][1] > In the top search bar start typing Service Bus > Select Service Bus
+              
+   
+   2. Click on the + Create  at the top left corner
+     
+        
+   3. Provide the required values:
+       
+      _Resource Group:_ Select the resource group you created earlier.
+   
+      _Namespace name:_ Enter a globally unique name:ajbikes
+   
+      _Location_: Select a location of your choice
+   
+      _Pricing toer_: Standard
+   
+      Leave other defaults and click Review + Create 
+   
+      <img src="./images/servicebus-create-1.jpeg" width="50%" height="50%" />
+   
+    
+   4. Click Create. Your Service Bus will be created in a minute or so
+   
+### <a name="u2c"> 2b. Create Function App for Orders Microservice APIs
    
    1. Login to Azure [portal][1] > In the top search bar start typing Function App > Select Function App
       
@@ -154,7 +179,7 @@ Below is the architecture for the example implementation.
    
 [home](#home)
    
-### <a name="u2c"> 2c. Create Order Creation Microservice
+### <a name="u2d"> 2c. Create Order Creation Microservice
    
    1. In the top search bar start typing Function App > Select Function App
       
@@ -235,7 +260,7 @@ Below is the architecture for the example implementation.
 
 [home](#home)
    
-### <a name="u2d"> 2d. Create Cosmos DB for Shipments Microservice data
+### <a name="u2e"> 2d. Create Cosmos DB for Shipments Microservice data
    
    Repeat the same steps you used in section [2a](#u2a)
  
@@ -243,36 +268,13 @@ Below is the architecture for the example implementation.
    
    Repeat the same steps you used in section [2b](#u2b)  
    
-### <a name="u2f"> 2f. Create Shipment Creation Microservice
+### <a name="u2g"> 2f. Create Shipment Creation Microservice
 
 [home](#home)
-### <a name="u2g"> 2g. Create Shipment Status Microservice
+### <a name="u2h"> 2g. Create Shipment Status Microservice
 
 [home](#home)
-### <a name="u2h"> 2h. Create Service Bus for Microservice communications
-   
-   1. Login to Azure [portal][1] > In the top search bar start typing Service Bus > Select Service Bus
-              
-   
-   2. Click on the + Create  at the top left corner
-     
-        
-   3. Provide the required values:
-       
-      _Resource Group:_ Select the resource group you created earlier.
-   
-      _Namespace name:_ Enter a globally unique name:ajbikes
-   
-      _Location_: Select a location of your choice
-   
-      _Pricing toer_: Standard
-   
-      Leave other defaults and click Review + Create 
-   
-      <img src="./images/servicebus-create-1.jpeg" width="50%" height="50%" />
-   
-    
-   4. Click Create. Your Service Bus will be created in a minute or so
+
         
    
 ### <a name="u2i"> 2i. Create API Management Gateway to front the Microservices
