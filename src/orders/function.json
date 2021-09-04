@@ -1,0 +1,45 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "neworder",
+      "direction": "out",
+      "type": "cosmosDB",
+      "connectionStringSetting": "appiorders_DOCUMENTDB",
+      "databaseName": "ordersdb",
+      "collectionName": "orderscontainer",
+      "partitionKey": "/id"
+    },
+    {
+      "name": "order",
+      "direction": "in",
+      "type": "cosmosDB",
+      "connectionStringSetting": "appiorders_DOCUMENTDB",
+      "databaseName": "ordersdb",
+      "collectionName": "orderscontainer",
+      "id": "{id}",
+      "partitionKey": "{id}"
+    },
+    {
+      "name": "outputSbMsg",
+      "direction": "out",
+      "type": "serviceBus",
+      "connection": "appi-ordermgmt_RootManageSharedAccessKey_SERVICEBUS",
+      "queueName": "appi-microservice-messaging"
+    }
+  ]
+}
