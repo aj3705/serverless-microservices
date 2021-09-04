@@ -144,6 +144,15 @@ Below is the architecture for the example implementation.
     
    4. Click Create. Your Service Bus will be created in a minute or so
    
+   5. Go to your Service Bus and click on Queues in the left menu > Click +Queue at the top left
+      
+      Enter ajbikes-microservice-messsaging in the name field. Accept other defaults and click Create.
+      
+      <img src="./images/servicebus-create-2.jpeg" width="50%" height="50%" />
+      
+      Queue will be created in a few seconds.
+   
+   
 ### <a name="u2c"> 2b. Create Function App for Orders Microservice APIs
    
    1. Login to Azure [portal][1] > In the top search bar start typing Function App > Select Function App
