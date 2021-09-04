@@ -205,15 +205,15 @@ Below is the architecture for the example implementation.
    
       <img src="./images/order-func-create-2.jpeg" width="80%" height="50%" />
       
-   3. Add bindings: Before we add the Create Order code, we will first bind this function to Orders Cosmos DB, so that this function can read from and write data to Orders Cosmos DB. We will also create an output binding to the Service Bus Message queue that we created earlier, so that the Order microservice can communicate with the Shipment microservice via service bus.
+   3. __Add bindings__: Before we add the Create Order code, we will first bind this function to Orders Cosmos DB, so that this function can read from and write data to Orders Cosmos DB. We will also create an output binding to the Service Bus Message queue that we created earlier, so that the Order microservice can communicate with the Shipment microservice via service bus.
       
       Click on Integration in left menu. This will open up the Integration page. You will see a pictorial view of the Trigger, Input bindings and Output bindings. 
       
       <img src="./images/order-func-create-3.jpeg" width="80%" height="50%" />
    
-      **Click Inputs > Add input ** 
+      __3a.Click Inputs > Add input__
       
-      Select Azure Cosmos DB from the Binding Type drop down.**
+      Select Azure Cosmos DB from the Binding Type drop down.
       
       Click on New under the Cosmos DB account connection drop down > select Azure Cosmos DB Account radio button 
      
@@ -224,30 +224,45 @@ Below is the architecture for the example implementation.
       Provide the following values and click OK:  
       
       Document parameter name: order
+   
       Database name: ajbikes-orders-db (name of the orders cosmos db you created earlier)
+   
       Collection name: ajbikes-orders-container (name of the container you created earlier)
+   
       Document ID : {id}
+   
       Partition key : {id}
       
       <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
    
-     **Click Outputs > Add Outputs ** 
+     __3b.Click Outputs > Add Outputs__ 
       
       Provide the following values and click OK:
+   
       Binding type : Azure Cosmos DB.
+   
       Cosmos DB account connection: this will be prepopulated to the connection you created in the earlier step. Leave it as is
+   
       Document parameter name : neworder
+   
       Datebase name: ajbikes-orders-db
+   
       Collection name: ajbikes-orders-container
+   
       partition key: /id
       
-     **Click Outputs > Add Outputs ** 
+     __3c.Click Outputs > Add Outputs__
       
       Provide the following values and click OK:
+   
       Binding type : Azure Service Bus.
+   
       Message type : Service Bus Queue
+   
       Service Bus connection: Click New >  Service Bus Connection: ajbikes service bus you created earlier. Leave other defaults and click OK.
+   
       Message paramter name : leave the default (outputSbMsg)
+   
       Queue name : ajbikes-microservice-messsaging ( service bus queue that you created earlier)
       
       
