@@ -119,7 +119,7 @@ Below is the architecture for the example implementation.
 
 [home](#home)
 
-### <a name="u2b"> 2h. Create Service Bus for Microservice communications
+### <a name="u2b"> 2b. Create Service Bus for Microservice communications
    
    1. Login to Azure [portal][1] > In the top search bar start typing Service Bus > Select Service Bus
               
@@ -153,7 +153,7 @@ Below is the architecture for the example implementation.
       Queue will be created in a few seconds.
    
    
-### <a name="u2c"> 2b. Create Function App for Orders Microservice APIs
+### <a name="u2c"> 2c. Create Function App for Orders Microservice APIs
    
    1. Login to Azure [portal][1] > In the top search bar start typing Function App > Select Function App
       
@@ -188,7 +188,7 @@ Below is the architecture for the example implementation.
    
 [home](#home)
    
-### <a name="u2d"> 2c. Create Order Creation Microservice
+### <a name="u2d"> 2d. Create Order Creation Microservice
    
    1. In the top search bar start typing Function App > Select Function App
       
@@ -273,14 +273,14 @@ Below is the architecture for the example implementation.
    
    Repeat the same steps you used in section [2a](#u2a)
  
-### <a name="u2e"> 2e. Create Function App for Shipments Microservice APIs
+### <a name="u2e"> 2f. Create Function App for Shipments Microservice APIs
    
    Repeat the same steps you used in section [2b](#u2b)  
    
-### <a name="u2g"> 2f. Create Shipment Creation Microservice
+### <a name="u2g"> 2g. Create Shipment Creation Microservice
 
 [home](#home)
-### <a name="u2h"> 2g. Create Shipment Status Microservice
+### <a name="u2h"> 2h. Create Shipment Status Microservice
 
 [home](#home)
 
