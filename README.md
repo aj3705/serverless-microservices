@@ -137,7 +137,8 @@ Below is the architecture for the example implementation.
    
       <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
    
-    4. Click Create. Your function will be created in a minute or so
+    
+   4. Click Create. Your function will be created in a minute or so
       
       <img src="./images/function-create-3.jpeg" width="50%" height="50%" />       
    
@@ -146,7 +147,9 @@ Below is the architecture for the example implementation.
    Repeat the same steps you used in section [2a](#u2a)
  
 ### <a name="u2d"> 2d. Create Function App for Shipments Microservice APIs
-     
+   
+   Repeat the same steps you used in section [3a](#u3a)  
+   
 ### <a name="u2e"> 2e. Create Service Bus for Microservice communications
    
 ### <a name="u2f"> 2f. Create API Management Gateway to front the Microservices
