@@ -205,7 +205,7 @@ Below is the architecture for the example implementation.
    
       <img src="./images/order-func-create-2.jpeg" width="80%" height="50%" />
       
-   3. Before we add the Create Order code, we will first bind this function to Orders Cosmos DB, so that this function can read from and write data to Orders Cosmos DB. We will also create an output binding to the Service Bus Message queue that we created earlier.
+   3. Add bindings: Before we add the Create Order code, we will first bind this function to Orders Cosmos DB, so that this function can read from and write data to Orders Cosmos DB. We will also create an output binding to the Service Bus Message queue that we created earlier, so that the Order microservice can communicate with the Shipment microservice via service bus.
       
       Click on Integration in left menu. This will open up the Integration page. You will see a pictorial view of the Trigger, Input bindings and Output bindings. 
       
@@ -241,6 +241,14 @@ Below is the architecture for the example implementation.
       Collection name: ajbikes-orders-container
       partition key: /id
       
+     **Click Outputs > Add Outputs ** 
+      
+      Provide the following values and click OK:
+      Binding type : Azure Service Bus.
+      Message type : Service Bus Queue
+      Service Bus connection: Click New >  Service Bus Connection: ajbikes service bus you created earlier. Leave other defaults and click OK.
+      Message paramter name : leave the default (outputSbMsg)
+      Queue name : ajbikes-microservice-messsaging ( service bus queue that you created earlier)
       
       
         
