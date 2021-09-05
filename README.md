@@ -40,12 +40,12 @@ Below is the architecture for the example implementation.
 ## <a name="u1"> 1. Create the Resource Group
 
    1. Login to Azure [portal][1] > In the top search bar start typing Resource Group > click on Resource Group
-      <img src="./images/rg-create-1.jpeg" width="80%" height="80%" />
+      <img src="./images/rg-create-1.jpeg" width="50%" height="50%" />
      
       
    2. Click on the + Create  at the top left corner
       
-      <img src="./images/rg-create-2.jpeg" width="80%" height="80%" />
+      <img src="./images/rg-create-2.jpeg" width="50%" height="50%" />
          
       
    3. Select the subscription you want to use from the drop down > provide the resource group name > Select the region of your choice > click review and create  
@@ -65,12 +65,12 @@ Below is the architecture for the example implementation.
    
    1. Login to Azure [portal][1] > In the top search bar start typing Cosmos DB > Select Azure Cosmos DB
       
-      <img src="./images/cosmosdb-create-1.jpeg" width="80%" height="50%" />
+      <img src="./images/cosmosdb-create-1.jpeg" width="50%" height="50%" />
     
    
    2. Click on the + Create  at the top left corner
       
-      <img src="./images/cosmosdb-create-2.jpeg" width="80%" height="50%" />
+      <img src="./images/cosmosdb-create-2.jpeg" width="50%" height="50%" />
       
       
    3. Select the Core(SQL) API option  
