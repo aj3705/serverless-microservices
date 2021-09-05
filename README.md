@@ -277,28 +277,48 @@ Below is the architecture for the example implementation.
    -  Replace the entire code with the code in [src/create_order.js][2] and click save
       
       <img src="./images/order-func-create-9.jpeg" width="80%" height="50%" />
-      
-   
-    
-   4. Click Create. Your function will be created in a minute or so
-      
-      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
-   
-   5. Click Create. Your function will be created in a minute or so
-      
-      <img src="./images/function-create-3.jpeg" width="50%" height="50%" />
+
 
 [home](#home)
    
 ### <a name="u2e"> 2d. Create Cosmos DB for Shipments Microservice data
    
    Repeat the same steps you used in section [2a](#u2a)
+   
+   This tutorial uses the following values
+   - Cosmos DB Account name : ajbikes-shipments-db
+   - Database name : ajbikes-shipments-db
+   - Container name : ajbikes-shipments-container
+   - Partition key: /id
  
 ### <a name="u2e"> 2f. Create Function App for Shipments Microservice APIs
    
    Repeat the same steps you used in section [2b](#u2b)  
+   This tutorial uses the following values:
+   -  Function App name: ajbikes-shipments-microservice
+   
    
 ### <a name="u2g"> 2g. Create Shipment Creation Microservice
+   
+   1. Go to ajbikes-shipments-microservice function app and create a new fuction called CreateShipment. Folow similar [steps](#u2d) that you used to create CreateOrder function, with the followng changes:
+   
+   - Trigger : Azure Service Bus Queue Trigger
+   
+   - Click New under Server Bus Connection > select the ajbikes service bus you created earlier. Click OK
+   
+   - Que name: ajbikes-microservice-messsaging
+   
+   <img src="./images/shipment-func-create-1.jpeg" width="80%" height="50%" />
+   
+   2. Following similar [steps](#u2d) you used for adding output bindings to CreateOrder function, add a Cosmos DB output binding to CreateShipment function, with the following changed:
+   
+   - Cosmos DB Account connection : ajbikes-shipments-db
+   - Document parameter name : newshipment
+   - Database name : ajbikes-shipments-db
+   - Collection name: ajbikes-shipments-container
+   - Partition key: /id
+   
+   <img src="./images/shipment-func-create-2.jpeg" width="80%" height="50%" />
 
 [home](#home)
 ### <a name="u2h"> 2h. Create Shipment Status Microservice
