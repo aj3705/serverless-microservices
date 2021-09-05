@@ -183,7 +183,7 @@ Below is the architecture for the example implementation.
    
 [home](#home)
    
-### <a name="u2d"> 2d. Create Order Creation Microservice
+### <a name="u2d"> 2d. Create Order Creation Microservice API
    
    1. In the top search bar start typing Function App > Select Function App
       
@@ -298,7 +298,7 @@ Below is the architecture for the example implementation.
    -  Function App name: ajbikes-shipments-microservice
    
    
-### <a name="u2g"> 2g. Create Shipment Creation Microservice
+### <a name="u2g"> 2g. Create Shipment Creation Microservice API
    
    1. Go to ajbikes-shipments-microservice function app and create a new fuction called CreateShipment. Folow similar [steps](#u2d) that you used to create CreateOrder function, with the followng changes:
    
