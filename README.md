@@ -302,23 +302,24 @@ Below is the architecture for the example implementation.
    
    1. Go to ajbikes-shipments-microservice function app and create a new fuction called CreateShipment. Folow similar [steps](#u2d) that you used to create CreateOrder function, with the followng changes:
    
-   - Trigger : Azure Service Bus Queue Trigger
+   -  Trigger : Azure Service Bus Queue Trigger
+ 
+   -  Click New under Server Bus Connection > select the ajbikes service bus you created earlier. Click OK
    
-   - Click New under Server Bus Connection > select the ajbikes service bus you created earlier. Click OK
+   -  Que name: ajbikes-microservice-messsaging
    
-   - Que name: ajbikes-microservice-messsaging
-   
-   <img src="./images/shipment-func-create-1.jpeg" width="80%" height="50%" />
+      <img src="./images/shipment-func-create-1.jpeg" width="80%" height="50%" />
    
    2. Following similar [steps](#u2d) you used for adding output bindings to CreateOrder function, add a Cosmos DB output binding to CreateShipment function, with the following changed:
    
-   - Cosmos DB Account connection : ajbikes-shipments-db
-   - Document parameter name : newshipment
-   - Database name : ajbikes-shipments-db
-   - Collection name: ajbikes-shipments-container
-   - Partition key: /id
+   -  Cosmos DB Account connection : ajbikes-shipments-db
    
-   <img src="./images/shipment-func-create-2.jpeg" width="80%" height="50%" />
+   -  Document parameter name : newshipment
+   -  Database name : ajbikes-shipments-db
+   -  Collection name: ajbikes-shipments-container
+   -  Partition key: /id
+   
+      <img src="./images/shipment-func-create-2.jpeg" width="80%" height="50%" />
 
 [home](#home)
 ### <a name="u2h"> 2h. Create Shipment Status Microservice
