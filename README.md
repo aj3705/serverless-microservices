@@ -272,7 +272,7 @@ Below is the architecture for the example implementation.
    
    -  Go to CreateOrder function that you created earlier and  click on Code+Test in the left menu
    
-   -  Make sure index.js is seleted in the drop down. 
+   -  Make sure index.js is selected in the drop down. 
    
    -  Replace the entire code with the code in [src/create_order.js][2] and click save
       
@@ -320,20 +320,99 @@ Below is the architecture for the example implementation.
    -  Partition key: /id
    
       <img src="./images/shipment-func-create-2.jpeg" width="80%" height="50%" />
+   
+   3. _Add code to CreateShipment function._
+      
+      -  Go to CreateShipment function that you created earlier and  click on Code+Test in the left menu
+   
+      -  Make sure index.js is selected in the drop down. 
+   
+      -  Replace the entire code with the code in [src/create_shipment.js][3] and click save
 
 [home](#home)
 ### <a name="u2h"> 2h. Create Shipment Status Microservice
+   
+       1. Go to ajbikes-shipments-microservice function app and create a new fuction called CreateShipment. Folow the same [steps](#u2d) that you used to create CreateOrder function, with the followng values:
+   
+      -  Trigger: Http Trigger
+      -  Name: ShipmentStatus
+      
+       2. Following similar [steps](#u2d) you used for adding input bindings to CreateOrder function, add a Cosmos DB input binding to CreateShipment function, with the following values:
+   
+      -  Cosmos DB Account connection : ajbikes-shipments-db
+      -  Document parameter name : shipment
+      -  Database name : ajbikes-shipments-db
+      -  Collection name: ajbikes-shipments-container
+      -  Document id :{id}
+      -  Partition key: {id}
+     
+      3. _Add code to ShipmentStatus function._
+      
+      -  Go to ShipmentStatus function that you created earlier and  click on Code+Test in the left menu
+   
+      -  Make sure index.js is selected in the drop down. 
+   
+      -  Replace the entire code with the code in [src/shipment_status.js][4] and click save
 
 [home](#home)
 
         
    
 ### <a name="u2i"> 2i. Create API Management Gateway to front the Microservices
+   
+   The last step is to front your Microservices with an API Management Gateway.Follow these steps to Create an API Management Gateway
+   
+   #### OrderCreate Microservice
+   
+      1. Go to your ajbikes-orders-microservice Function App
+
+      2. Click on API Management in the left menu
+
+      3. Click _Create new_ under the API Management dropdown 
+
+         <img src="./images/apim-create-1.jpeg" width="80%" height="50%" />
+
+      4. Enter the required values:
+
+         -  Name: ajbikes-microservices-apim
+         -  Organization name : ajbikes
+         -  Accept rest of the defaults
+
+         Click Export. 
+
+         <img src="./images/apim-create-2.jpeg" width="80%" height="50%" />
+   
+      5. Once APIM is linked,you will be redirected to APIM Management blade. If not, go back to the API Management blade in the ajbikes-orders-microservice Function App by clicking on API Management in the left menu. After that perform the following steps.
+   
+         -  Click Enable Application Insights and click Link API
+            
+             <img src="./images/apim-create-3.jpeg" width="80%" height="50%" /> 
+   
+         - Select CreateOrder if it's not already selected, Click Selct.
+   
+             <img src="./images/apim-create-4.jpeg" width="80%" height="50%" /> 
+   
+         -  Change API URL suffix to ajbikes-orders. Accept all other defaults and click Create
+      
+             <img src="./images/apim-create-5.jpeg" width="80%" height="50%" /> 
+         
+  #### ShipmentStatus Microservice 
+   
+  Repeat the above steps for ShipmentStatus Microservice, but this time instead of creating a new APIM select the ajbikes-microservices-apim that was created in the earlier step.Use ajbikes-shipments for API URL suffix and accept the rest of the values.
+   
+  
  
 [home](#home)
 ## <a name="u3"> 3. Test your micro services
+ 
+ Now that you have implemented the solution, it's time to test it end to end to make sure the soultion is functioning as expected. 
    
-   Follow the steps under **Run the sample** section in the [Azure DevOps OAuth sample app documentation][6] on github to obtain access and refresh tokens. Securely save these values. **You should keep these values secret.** 
+ 1. Go to ajbikes-microservices-apim that we created earlier and click on APIs in the left menu. You will two APIs ajbikes-orders-microservice and ajbikes-shipments-microservice.
+ 
+ 2. Click ajbikes-orders-microservice > Click Test tab > Select _POST CreateOrder_
+   
+   
+
 [home](#home)
 ## <a name="u4"> 4. Further reading
    
@@ -355,5 +434,7 @@ Below is the architecture for the example implementation.
 
 [1]:https://portal.azure.com
 [2]:https://github.com/aj3705/serverless-microservices/blob/main/src/orders/create_order.js
+[3]:https://github.com/aj3705/serverless-microservices/blob/main/src/shipments/create_shipment.js  
+[4]:https://github.com/aj3705/serverless-microservices/blob/main/src/shipments/shipment_status.js
 
 
