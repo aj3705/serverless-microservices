@@ -407,6 +407,95 @@ Below is the architecture for the example implementation.
    
    Repeat the above steps for ShipmentStatus Microservice, but this time instead of creating a new APIM select the ajbikes-microservices-apim that was created in the earlier step.Use ajbikes-shipments for API URL suffix and accept the rest of the values.
    
+   [home](#home)
+   
+## <a name="u3"> 3. Test your micro services
+ 
+ Now that you have implemented the solution, it's time to test it end to end to make sure the soultion is functioning as expected. 
+   
+ 1. Go to ajbikes-microservices-apim that we created earlier and click on APIs in the left menu. You will two APIs ajbikes-orders-microservice and ajbikes-shipments-microservice.
+ 
+ 2. Click ajbikes-orders-microservice > Click Test tab > Select POST CreateOrder
+    
+     <img src="./images/testing-1.jpeg" width="50%" height="50%" /> 
+ 
+ 3. Copy the json file from  [src/create_order_request.json][5] and paste it into the Request body (make sure Raw is selected). __Note:__You can create as many orders as you want as long as you use a different order id each time.
+   
+      <img src="./images/testing-2.jpeg" width="50%" height="50%" />
+ 
+ 4. Click Send. You should get an order created successfully message. 
+      
+      <img src="./images/testing-3.jpeg" width="50%" height="50%" />
+ 
+### What happend behind the scenes ? 
+  
+ Exactly what was laid our in the architecture diagram.  
+   
+   - 1. APIM sent the Order to CreateOrder API (function) of the ajbikes-orders Microservice, 
+   
+   - 2. The  CreateOrder function stored the record in ajbikes-order-db and enqued Order message  in the ajbikes-microservice-messsaging Azure Service Bus Queue
+   
+   - 3. Service Bus Queue triggered the CreateShipment function of the ajbikes-shipments-microservice which processes the message and created a Shipment in the  ajbikes-shipments database
+ 
+   Now let's get the status of the shipment for this order. 
+   
+   1. Go back to API Management > APIs
+   
+   2. Select ajbikes-shipments-microservice > Click Test tab > Click POST ShipmentStatus
+   
+   3. Copy the json file from  [src/shipment_status_request.json][6] and paste it into the Request body (make sure Raw is selected). Note that the shipment id is created based on this convention: shipmentid = shipment+orderid
+   
+   4. Click send
+   
+   5. You should get the Shipment Status Message.
+   
+   <img src="./images/testing-4.jpeg" width="50%" height="50%" />
+   
+   ### How to verify the data flow across the components in the solution. 
+   
+   1. Go to ajbikes-orders-microservice . You will see the function execution count for all functions in the overview page
+   
+   <img src="./images/testing-5.jpeg" width="50%" height="50%" />
+   
+   2. Click on Functions > Create Order Function. You will see successful execution count for the Create Order function.
+      
+   <img src="./images/testing-6.jpeg" width="50%" height="50%" />
+   
+   3. Click monitor and click the last execution. You will see the function logs, that order is being created.
+   
+   <img src="./images/testing-7.jpeg" width="50%" height="50%" />
+   
+   4. Go to ajbikes Service Bus > ajbikes-microservice-messaging Service Bus Queue. In the overview page you will see the incoming anf out going message counts
+   
+   <img src="./images/testing-8.jpeg" width="50%" height="50%" />
+   
+   5. Go to ajbikes Service Bus > Click Monitoring > Insights(Preview) in the left menu > Click on Messages. You can see the incoming and outgoing message counts 
+         
+   <img src="./images/testing-9.jpeg" width="50%" height="50%" />
+   
+   6. Repeat steps 1-3 for ajbikes-shipments-microservice/CreateShipment function. You can see the CreateShipment function logs indicating that a shipment is created for the Order message that was received through Azure Service Bus
+   
+   <img src="./images/testing-10.jpeg" width="50%" height="50%" /> 
+   
+   7. Finally you can see the order and shipment in the  ajbikes-orders-db and ajbikes-shipments-db databases:
+   
+   <img src="./images/testing-11.jpeg" width="50%" height="50%" /> 
+   
+   <img src="./images/testing-12.jpeg" width="50%" height="50%" /> 
+         
+                  
+   
+   
+[home](#home)
+   
+## <a name="u4"> 4. Further reading
+   
+This tutorial is intended to show case the art of the possible - How you can quickly and easiliy build production grade micro service architectures usning Azure Serverless services. This is not meant to provide indepth implementation guidence. Distributed tracing and Security are also out of the scope of this tutorial. Hope this whet your apetitie for serverless and microsevrices and that you will dig deeper to learn more and build some cool servless applications. Here is the for futher learning on this topic: 
+   
+https://azure.microsoft.com/en-us/blog/building-serverless-microservices-in-azure-sample-architecture/
+![image](https://user-images.githubusercontent.com/48219951/132116841-a5d92c47-038b-4d4e-a3b2-879497111ddf.png)
+
+   
 
 
    
