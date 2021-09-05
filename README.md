@@ -281,7 +281,7 @@ Below is the architecture for the example implementation.
 
 [home](#home)
    
-### <a name="u2e"> 2d. Create Cosmos DB for Shipments Microservice data
+### <a name="u2e"> 2e. Create Cosmos DB for Shipments Microservice data
    
    Repeat the same steps you used in section [2a](#u2a)
    
@@ -291,7 +291,7 @@ Below is the architecture for the example implementation.
    - Container name : ajbikes-shipments-container
    - Partition key: /id
  
-### <a name="u2e"> 2f. Create Function App for Shipments Microservice APIs
+### <a name="u2f"> 2f. Create Function App for Shipments Microservice APIs
    
    Repeat the same steps you used in section [2b](#u2b)  
    This tutorial uses the following values:
@@ -315,8 +315,11 @@ Below is the architecture for the example implementation.
    -  Cosmos DB Account connection : ajbikes-shipments-db
    
    -  Document parameter name : newshipment
+   
    -  Database name : ajbikes-shipments-db
+   
    -  Collection name: ajbikes-shipments-container
+   
    -  Partition key: /id
    
       <img src="./images/shipment-func-create-2.jpeg" width="50%" height="50%" />
@@ -330,20 +333,26 @@ Below is the architecture for the example implementation.
       -  Replace the entire code with the code in [src/create_shipment.js][3] and click save
 
 [home](#home)
+
 ### <a name="u2h"> 2h. Create Shipment Status Microservice
    
        1. Go to ajbikes-shipments-microservice function app and create a new fuction called CreateShipment. Folow the same [steps](#u2d) that you used to create CreateOrder function, with the followng values:
    
       -  Trigger: Http Trigger
+   
       -  Name: ShipmentStatus
       
        2. Following similar [steps](#u2d) you used for adding input bindings to CreateOrder function, add a Cosmos DB input binding to CreateShipment function, with the following values:
-   
       -  Cosmos DB Account connection : ajbikes-shipments-db
+   
       -  Document parameter name : shipment
+   
       -  Database name : ajbikes-shipments-db
+   
       -  Collection name: ajbikes-shipments-container
+   
       -  Document id :{id}
+   
       -  Partition key: {id}
      
       3. _Add code to ShipmentStatus function._
@@ -355,8 +364,6 @@ Below is the architecture for the example implementation.
       -  Replace the entire code with the code in [src/shipment_status.js][4] and click save
 
 [home](#home)
-
-        
    
 ### <a name="u2i"> 2i. Create API Management Gateway to front the Microservices
    
@@ -375,7 +382,9 @@ Below is the architecture for the example implementation.
       4. Enter the required values:
 
          -  Name: ajbikes-microservices-apim
+   
          -  Organization name : ajbikes
+   
          -  Accept rest of the defaults
 
          Click Export. 
@@ -403,13 +412,14 @@ Below is the architecture for the example implementation.
   
  
 [home](#home)
+   
 ## <a name="u3"> 3. Test your micro services
  
  Now that you have implemented the solution, it's time to test it end to end to make sure the soultion is functioning as expected. 
    
  1. Go to ajbikes-microservices-apim that we created earlier and click on APIs in the left menu. You will two APIs ajbikes-orders-microservice and ajbikes-shipments-microservice.
  
- 2. Click ajbikes-orders-microservice > Click Test tab > Select _POST CreateOrder_
+ 2. Click ajbikes-orders-microservice > Click Test tab > Select POST CreateOrder
     
      <img src="./images/testing-1.jpeg" width="50%" height="50%" /> 
  
@@ -421,25 +431,31 @@ Below is the architecture for the example implementation.
       
       <img src="./images/testing-3.jpeg" width="50%" height="50%" />
  
- ### What happend behind the scenes ? 
+### What happend behind the scenes ? 
   
  Exactly what was laid our in the architecture diagram.  
    
    - 1. APIM sent the Order to CreateOrder API (function) of the ajbikes-orders Microservice, 
+   
    - 2. The  CreateOrder function stored the record in ajbikes-order-db and enqued Order message  in the ajbikes-microservice-messsaging Azure Service Bus Queue
+   
    - 3. Service Bus Queue triggered the CreateShipment function of the ajbikes-shipments-microservice which processes the message and created a Shipment in the  ajbikes-shipments database
  
    Now let's get the status of the shipment for this order. 
    
       1. Go back to API Management > APIs
+   
       2. Select ajbikes-shipments-microservice > Click Test tab > Click POST ShipmentStatus
+   
       3. Copy the json file from  [src/shipment_status_request.json][6] and paste it into the Request body (make sure Raw is selected). Note that the shipment id is created based on this convention: shipmentid = shipment+orderid
+   
       4. Click send
+   
       5. You should get the Shipment Status Message.
    
          <img src="./images/testing-4.jpeg" width="50%" height="50%" />
   
-   ### How to verify the data flow across the components in the solution. 
+### How to verify the data flow across the components in the solution. 
    
       1. Go to ajbikes-orders-microservice . You will see the function execution count for all functions in the overview page
       
@@ -467,7 +483,7 @@ Below is the architecture for the example implementation.
    
       7. Finally you can see the order and shipment in the  ajbikes-orders-db and ajbikes-shipments-db databases:
    
-          <img src="./images/testing-11.jpeg" width="50%" height="50%" /> 
+         <img src="./images/testing-11.jpeg" width="50%" height="50%" /> 
    
          <img src="./images/testing-12.jpeg" width="50%" height="50%" /> 
          
@@ -475,6 +491,7 @@ Below is the architecture for the example implementation.
    
    
 [home](#home)
+   
 ## <a name="u4"> 4. Further reading
    
 This tutorial is intended to show case the art of the possible - How you can quickly and easiliy build production grade micro service architectures usning Azure Serverless services. This is not meant to provide indepth implementation guidence. Distributed tracing and Security are also out of the scope of this tutorial. Hope this whet your apetitie for serverless and microsevrices and that you will dig deeper to learn more and build some cool servless applications. Here is the for futher learning on this topic: 
