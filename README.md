@@ -417,7 +417,7 @@ Below is the architecture for the example implementation.
  
  2. Click ajbikes-orders-microservice > Click Test tab > Select POST CreateOrder
     
-     <img src="./images/testing-1.jpeg" width="50%" height="50%" /> 
+     <img src="./images/testing-1.jpeg" width="70%" height="50%" /> 
  
  3. Copy the json file from  [src/create_order_request.json][5] and paste it into the Request body (make sure Raw is selected). __Note:__You can create as many orders as you want as long as you use a different order id each time.
    
@@ -431,11 +431,11 @@ Below is the architecture for the example implementation.
   
  Exactly what was laid our in the architecture diagram.  
    
-   - 1. APIM sent the Order to CreateOrder API (function) of the ajbikes-orders Microservice, 
+   1. APIM sent the Order to CreateOrder API (function) of the ajbikes-orders Microservice, 
    
-   - 2. The  CreateOrder function stored the record in ajbikes-order-db and enqued Order message  in the ajbikes-microservice-messsaging Azure Service Bus Queue
+   2. The  CreateOrder function stored the record in ajbikes-order-db and enqued Order message  in the ajbikes-microservice-messsaging Azure Service Bus Queue
    
-   - 3. Service Bus Queue triggered the CreateShipment function of the ajbikes-shipments-microservice which processes the message and created a Shipment in the  ajbikes-shipments database
+   3. Service Bus Queue triggered the CreateShipment function of the ajbikes-shipments-microservice which processes the message and created a Shipment in the  ajbikes-shipments database
  
    Now let's get the status of the shipment for this order. 
    
