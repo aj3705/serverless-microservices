@@ -413,7 +413,7 @@ Below is the architecture for the example implementation.
     
      <img src="./images/testing-1.jpeg" width="50%" height="50%" /> 
  
- 3. Copy the json file from  [src/create_order_request.json][5] and paste it into the Request body (make sure Raw is selected)
+ 3. Copy the json file from  [src/create_order_request.json][5] and paste it into the Request body (make sure Raw is selected). __Note:__You can create as many orders as you want as long as you use a different order id each time.
    
       <img src="./images/testing-2.jpeg" width="50%" height="50%" />
  
