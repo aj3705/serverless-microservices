@@ -490,7 +490,7 @@ Below is the architecture for the example implementation.
    
 ## <a name="u4"> 4. Further reading
    
-This tutorial is intended to show case the art of the possible - How you can quickly and easiliy build production grade micro service architectures usning Azure Serverless services. This is not meant to provide indepth implementation guidence. Distributed tracing and Security are also out of the scope of this tutorial. Hope this whet your apetitie for serverless and microsevrices and that you will dig deeper to learn more and build some cool servless applications. Here is the for futher learning on this topic: 
+This tutorial is intended to show case the art of the possible - How you can quickly and easiliy build production grade micro service architectures usning Azure Serverless services. This is not meant to provide indepth implementation guidence. Distributed tracing and Security are also out of the scope of this tutorial. Hope this whet your apetitie for serverless and microsevrices and that you will dig deeper to learn more and build some cool servless applications. Here is the link for futher learning on this topic: 
    
 https://azure.microsoft.com/en-us/blog/building-serverless-microservices-in-azure-sample-architecture/
    
