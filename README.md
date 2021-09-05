@@ -376,37 +376,43 @@ Below is the architecture for the example implementation.
    3. Click _Create new_ under the API Management dropdown 
 
          <img src="./images/apim-create-1.jpeg" width="50%" height="50%" />
+   
+   4.Enter the required values:
+   
+   -  Name: ajbikes-microservices-apim
+   
+   -  Organization name : ajbikes
+   
+   -  Accept rest of the defaults
+   
+   Click Export. 
+   
+   <img src="./images/apim-create-2.jpeg" width="50%" height="50%" />
+   
+   5. Once APIM is linked,you will be redirected to APIM Management blade. If not, go back to the API Management blade in the ajbikes-orders-microservice Function App by clicking on API Management in the left menu. After that perform the following steps.
+   
+   -  Click Enable Application Insights and click Link API
+   
+   <img src="./images/apim-create-3.jpeg" width="50%" height="50%" />
+   
+   - Select CreateOrder if it's not already selected, Click Selct.
+   
+   <img src="./images/apim-create-4.jpeg" width="50%" height="50%" /> 
+   
+   -  Change API URL suffix to ajbikes-orders. Accept all other defaults and click Create
+   
+   <img src="./images/apim-create-5.jpeg" width="50%" height="50%" />
+   
+   #### ShipmentStatus Microservice
+   
+   Repeat the above steps for ShipmentStatus Microservice, but this time instead of creating a new APIM select the ajbikes-microservices-apim that was created in the earlier step.Use ajbikes-shipments for API URL suffix and accept the rest of the values.
+   
 
-    4. Enter the required values:
 
-         -  Name: ajbikes-microservices-apim
    
-         -  Organization name : ajbikes
    
-         -  Accept rest of the defaults
+ 
 
-         Click Export. 
-
-         <img src="./images/apim-create-2.jpeg" width="50%" height="50%" />
-   
-    5. Once APIM is linked,you will be redirected to APIM Management blade. If not, go back to the API Management blade in the ajbikes-orders-microservice Function App by clicking on API Management in the left menu. After that perform the following steps.
-   
-         -  Click Enable Application Insights and click Link API
-            
-             <img src="./images/apim-create-3.jpeg" width="50%" height="50%" /> 
-   
-         - Select CreateOrder if it's not already selected, Click Selct.
-   
-             <img src="./images/apim-create-4.jpeg" width="50%" height="50%" /> 
-   
-         -  Change API URL suffix to ajbikes-orders. Accept all other defaults and click Create
-      
-             <img src="./images/apim-create-5.jpeg" width="50%" height="50%" /> 
-         
-   #### ShipmentStatus Microservice 
-   
-  Repeat the above steps for ShipmentStatus Microservice, but this time instead of creating a new APIM select the ajbikes-microservices-apim that was created in the earlier step.Use ajbikes-shipments for API URL suffix and accept the rest of the values.
-![image](https://user-images.githubusercontent.com/48219951/132116487-22e37d42-d129-4a39-970d-e3c96013aed9.png)
 
 
 [1]:https://portal.azure.com
