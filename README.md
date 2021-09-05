@@ -157,7 +157,7 @@ Below is the architecture for the example implementation.
    
    1. Login to Azure [portal][1] > In the top search bar start typing Function App > Select Function App
       
-      <img src="./images/function-create-1.jpeg" width="80%" height="50%" />
+      <img src="./images/function-create-1.jpeg" width="50%" height="50%" />
     
    
    2. Click on the + Create  at the top left corner
@@ -189,7 +189,7 @@ Below is the architecture for the example implementation.
       
       Click Functions >Functions in the left menu > click Create at the top left corner
       
-      <img src="./images/order-func-create-1.jpeg" width="80%" height="50%" />
+      <img src="./images/order-func-create-1.jpeg" width="50%" height="50%" />
     
    
    2. Select Http trigger > Change the function name to CreateOrder. 
@@ -198,13 +198,13 @@ Below is the architecture for the example implementation.
       
       Click Create. This will create the function and open the CreateOrder function page.
    
-      <img src="./images/order-func-create-2.jpeg" width="80%" height="50%" />
+      <img src="./images/order-func-create-2.jpeg" width="50%" height="50%" />
       
    3. __Add bindings__: Before we add the Create Order code, we will first bind this function to Orders Cosmos DB, so that this function can read from and write data to Orders Cosmos DB. We will also create an output binding to the Service Bus Message queue that we created earlier, so that the Order microservice can communicate with the Shipment microservice via service bus.
       
       Click on Integration in left menu. This will open up the Integration page. You will see a pictorial view of the Trigger, Input bindings and Output bindings. 
       
-      <img src="./images/order-func-create-3.jpeg" width="80%" height="50%" />
+      <img src="./images/order-func-create-3.jpeg" width="50%" height="50%" />
    
       __3a.Click Inputs > Add input__
       
@@ -214,7 +214,7 @@ Below is the architecture for the example implementation.
      
       -  Select the ajbikes-orders-db Cosmos database you created earlier > Click OK
       
-         <img src="./images/order-func-create-5.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-5.jpeg" width="50%" height="50%" />
       
       -  Provide the following values and click OK:  
       
@@ -228,7 +228,7 @@ Below is the architecture for the example implementation.
    
          -  Partition key : {id}
       
-         <img src="./images/order-func-create-6.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-6.jpeg" width="50%" height="50%" />
    
       __3b.Click Outputs > Add Outputs__ 
       
@@ -246,7 +246,7 @@ Below is the architecture for the example implementation.
    
          -  partition key: /id
       
-         <img src="./images/order-func-create-7.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-7.jpeg" width="50%" height="50%" />
    
       __3c.Click Outputs > Add Outputs__
       
@@ -264,7 +264,7 @@ Below is the architecture for the example implementation.
       
          Your output binding should look like this after it is created: 
    
-         <img src="./images/order-func-create-8.jpeg" width="80%" height="50%" />
+         <img src="./images/order-func-create-8.jpeg" width="50%" height="50%" />
      
       
         
@@ -276,7 +276,7 @@ Below is the architecture for the example implementation.
    
    -  Replace the entire code with the code in [src/create_order.js][2] and click save
       
-      <img src="./images/order-func-create-9.jpeg" width="80%" height="50%" />
+      <img src="./images/order-func-create-9.jpeg" width="50%" height="50%" />
 
 
 [home](#home)
@@ -308,7 +308,7 @@ Below is the architecture for the example implementation.
    
    -  Que name: ajbikes-microservice-messsaging
    
-      <img src="./images/shipment-func-create-1.jpeg" width="80%" height="50%" />
+      <img src="./images/shipment-func-create-1.jpeg" width="50%" height="50%" />
    
    2. Following similar [steps](#u2d) you used for adding output bindings to CreateOrder function, add a Cosmos DB output binding to CreateShipment function, with the following changed:
    
@@ -319,7 +319,7 @@ Below is the architecture for the example implementation.
    -  Collection name: ajbikes-shipments-container
    -  Partition key: /id
    
-      <img src="./images/shipment-func-create-2.jpeg" width="80%" height="50%" />
+      <img src="./images/shipment-func-create-2.jpeg" width="50%" height="50%" />
    
    3. _Add code to CreateShipment function._
       
@@ -370,7 +370,7 @@ Below is the architecture for the example implementation.
 
       3. Click _Create new_ under the API Management dropdown 
 
-         <img src="./images/apim-create-1.jpeg" width="80%" height="50%" />
+         <img src="./images/apim-create-1.jpeg" width="50%" height="50%" />
 
       4. Enter the required values:
 
@@ -380,21 +380,21 @@ Below is the architecture for the example implementation.
 
          Click Export. 
 
-         <img src="./images/apim-create-2.jpeg" width="80%" height="50%" />
+         <img src="./images/apim-create-2.jpeg" width="50%" height="50%" />
    
       5. Once APIM is linked,you will be redirected to APIM Management blade. If not, go back to the API Management blade in the ajbikes-orders-microservice Function App by clicking on API Management in the left menu. After that perform the following steps.
    
          -  Click Enable Application Insights and click Link API
             
-             <img src="./images/apim-create-3.jpeg" width="80%" height="50%" /> 
+             <img src="./images/apim-create-3.jpeg" width="50%" height="50%" /> 
    
          - Select CreateOrder if it's not already selected, Click Selct.
    
-             <img src="./images/apim-create-4.jpeg" width="80%" height="50%" /> 
+             <img src="./images/apim-create-4.jpeg" width="50%" height="50%" /> 
    
          -  Change API URL suffix to ajbikes-orders. Accept all other defaults and click Create
       
-             <img src="./images/apim-create-5.jpeg" width="80%" height="50%" /> 
+             <img src="./images/apim-create-5.jpeg" width="50%" height="50%" /> 
          
   #### ShipmentStatus Microservice 
    
@@ -410,7 +410,8 @@ Below is the architecture for the example implementation.
  1. Go to ajbikes-microservices-apim that we created earlier and click on APIs in the left menu. You will two APIs ajbikes-orders-microservice and ajbikes-shipments-microservice.
  
  2. Click ajbikes-orders-microservice > Click Test tab > Select _POST CreateOrder_
-   
+    
+     <img src="./images/testing-1.jpeg" width="50%" height="50%" /> 
    
 
 [home](#home)
