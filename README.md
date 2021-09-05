@@ -151,7 +151,8 @@ Below is the architecture for the example implementation.
       <img src="./images/servicebus-create-2.jpeg" width="50%" height="50%" />
       
       Queue will be created in a few seconds.
-   
+
+[home](#home)   
    
 ### <a name="u2c"> 2c. Create Function App for Orders Microservice APIs
    
@@ -290,13 +291,16 @@ Below is the architecture for the example implementation.
    - Database name : ajbikes-shipments-db
    - Container name : ajbikes-shipments-container
    - Partition key: /id
- 
+
+[home](#home)
+   
 ### <a name="u2f"> 2f. Create Function App for Shipments Microservice APIs
    
    Repeat the same steps you used in section [2b](#u2b)  
    This tutorial uses the following values:
    -  Function App name: ajbikes-shipments-microservice
    
+[home](#home)
    
 ### <a name="u2g"> 2g. Create Shipment Creation Microservice API
    
@@ -362,6 +366,8 @@ Below is the architecture for the example implementation.
       -  Make sure index.js is selected in the drop down. 
    
       -  Replace the entire code with the code in [src/shipment_status.js][4] and click save
+
+[home](#home)
    
 ### <a name="u2i"> 2i. Create API Management Gateway to front the Microservices
    
@@ -407,7 +413,7 @@ Below is the architecture for the example implementation.
    
    Repeat the above steps for ShipmentStatus Microservice, but this time instead of creating a new APIM select the ajbikes-microservices-apim that was created in the earlier step.Use ajbikes-shipments for API URL suffix and accept the rest of the values.
    
-   [home](#home)
+[home](#home)
    
 ## <a name="u3"> 3. Test your micro services
  
